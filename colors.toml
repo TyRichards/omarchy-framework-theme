@@ -8,24 +8,24 @@ background = "#000000"
 
 # Selection colors
 selection_foreground = "#000000"
-selection_background = "#b09fdf"
+selection_background = "#ac9cd6"
 
 # Normal colors (ANSI 0-7)
 color0 = "#000000"
 color1 = "#9684cc"
-color2 = "#b09fdf"
+color2 = "#ac9cd6"
 color3 = "#c8b8e6"
 color4 = "#8374b9"
 color5 = "#9684cc"
-color6 = "#b09fdf"
+color6 = "#ac9cd6"
 color7 = "#ded1f5"
 
 # Bright colors (ANSI 8-15)
 color8 = "#473a64"
 color9 = "#9684cc"
-color10 = "#b09fdf"
+color10 = "#ac9cd6"
 color11 = "#c8b8e6"
 color12 = "#8374b9"
 color13 = "#9684cc"
-color14 = "#b09fdf"
+color14 = "#ac9cd6"
 color15 = "#ded1f5"

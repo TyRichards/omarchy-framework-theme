@@ -1,2 +1,70 @@
 @define-color background #000000;
-@define-color foreground #b09fdf;
+@define-color foreground #ac9cd6;
+
+window#waybar > box {
+    /* border-top: 2px solid @foreground; */
+    /* border-right: 2px solid @foreground; */
+    border-bottom: 2px solid @foreground;
+}
+
+box#workspaces button {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid @foreground;
+    border-right: 1px solid @foreground;
+    border-radius: 0;
+    margin: 0;
+    padding: 1px 7px 2px 7px;
+    min-width: 20px;
+    min-height: 20px;
+    /* font-size: 12px; */
+}
+
+box#workspaces button:last-child {
+    border-right: 2px solid @foreground;
+}
+
+box#workspaces button label {
+    font-weight: bold;
+}
+
+box#workspaces button.active {
+    color: #ff7547; /* #C93F16 */
+    background-color: rgba(0,0,0,0.0);
+}
+
+box#workspaces button.active label {
+    color: #ff7547; /* More specific selector for text */
+    font-weight: bold;
+}
+
+box#workspaces button.urgent {
+    color: #ff7547;
+    background-color: rgba(0,0,0,0.0);
+}
+
+box.modules-left {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.modules-left #custom-omarchy {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 2px 6px 2px 6px;
+    min-width: 20px;
+    min-height: 20px;
+    background-color: @foreground;
+    color: #000000;
+    font-size: 20px;
+}
+
+#custom-update {
+    color: #67cb8d;
+}
+
+tooltip {
+    border: 2px solid @foreground;
+    border-radius: 1px;
+}

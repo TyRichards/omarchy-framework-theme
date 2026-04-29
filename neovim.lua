@@ -21,15 +21,15 @@ return {
         yellow     = "#8374b9",
         orange     = "#ff7547",
         green      = "#574b86",
-        cyan       = "#b09fdf",
+        cyan       = "#ac9cd6",
         blue       = "#b09fef",
         purple     = "#9684cc",
         brown      = "#645a7f",
 
         bright_red    = "#9684cc",
         bright_yellow = "#c8b8e6",
-        bright_green  = "#b09fdf",
-        bright_cyan   = "#b09fdf",
+        bright_green  = "#ac9cd6",
+        bright_cyan   = "#ac9cd6",
         bright_blue   = "#8374b9",
         bright_purple = "#9684cc",
 
