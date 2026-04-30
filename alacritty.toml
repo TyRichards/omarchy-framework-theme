@@ -4,7 +4,7 @@ background = "#000000"
 foreground = "#ded1f5"
 
 [window]
-opacity = 0.75
+opacity = 0.5
 padding.x = 25
 padding.y = 25
 
