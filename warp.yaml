@@ -2,7 +2,7 @@ name: Aether
 accent: "#8374b9"
 cursor: "#8374b9"
 background: "#000000"
-foreground: "#ded1f5"
+foreground: "#ac9cd5"
 details: darker
 
 terminal_colors:
@@ -14,7 +14,7 @@ terminal_colors:
     blue:    "#8374b9"
     magenta: "#9684cc"
     cyan:    "#ff7547"
-    white:   "#ded1f5"
+    white:   "#ac9cd5"
   bright:
     black:   "#4e3f6e"
     red:     "#9684cc"
@@ -23,4 +23,4 @@ terminal_colors:
     blue:    "#8374b9"
     magenta: "#9684cc"
     cyan:    "#ac9cd6"
-    white:   "#ded1f5"
+    white:   "#ac9cd5"

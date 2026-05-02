@@ -32,13 +32,13 @@
         "ghost_element.selected": "#ff754720",
         "ghost_element.disabled": "#4e3f6e20",
 
-        "text": "#ded1f5",
+        "text": "#ac9cd5",
         "text.muted": "#4e3f6e",
         "text.placeholder": "#4e3f6e",
         "text.disabled": "#4e3f6e80",
         "text.accent": "#ff7547",
 
-        "icon": "#ded1f5",
+        "icon": "#ac9cd5",
         "icon.muted": "#4e3f6e",
         "icon.disabled": "#4e3f6e60",
         "icon.placeholder": "#4e3f6e",
@@ -65,14 +65,14 @@
         "scrollbar.track.background": "#00000000",
         "scrollbar.track.border": "#00000000",
 
-        "editor.foreground": "#ded1f5",
+        "editor.foreground": "#ac9cd5",
         "editor.background": "#000000",
         "editor.gutter.background": "#000000",
         "editor.subheader.background": "#000000",
         "editor.active_line.background": "#00000060",
         "editor.highlighted_line.background": "#ff754715",
         "editor.line_number": "#4e3f6e",
-        "editor.active_line_number": "#ded1f5",
+        "editor.active_line_number": "#ac9cd5",
         "editor.invisible": "#4e3f6e40",
         "editor.wrap_guide": "#4e3f6e30",
         "editor.active_wrap_guide": "#4e3f6e60",
@@ -80,7 +80,7 @@
         "editor.document_highlight.write_background": "#ff754730",
 
         "terminal.background": "#000000",
-        "terminal.foreground": "#ded1f5",
+        "terminal.foreground": "#ac9cd5",
         "terminal.bright_foreground": "#e6ddf8",
         "terminal.dim_foreground": "#4e3f6e",
         "terminal.ansi.black": "#000000",
@@ -104,9 +104,9 @@
         "terminal.ansi.cyan": "#ac9cd6",
         "terminal.ansi.bright_cyan": "#ac9cd6",
         "terminal.ansi.dim_cyan": "#ac9cd680",
-        "terminal.ansi.white": "#ded1f5",
+        "terminal.ansi.white": "#ac9cd5",
         "terminal.ansi.bright_white": "#e6ddf8",
-        "terminal.ansi.dim_white": "#ded1f580",
+        "terminal.ansi.dim_white": "#ac9cd580",
 
         "link_text.hover": "#ff7547",
 
@@ -168,7 +168,7 @@
 
         "players": [
           {
-            "cursor": "#ded1f5",
+            "cursor": "#ac9cd5",
             "selection": "#ac9cd660",
             "background": "#ff7547"
           },
@@ -241,7 +241,7 @@
             "font_weight": null
           },
           "embedded": {
-            "color": "#ded1f5",
+            "color": "#ac9cd5",
             "font_style": null,
             "font_weight": null
           },
@@ -331,7 +331,7 @@
             "font_weight": null
           },
           "primary": {
-            "color": "#ded1f5",
+            "color": "#ac9cd5",
             "font_style": null,
             "font_weight": null
           },
@@ -411,7 +411,7 @@
             "font_weight": null
           },
           "type.builtin": {
-            "color": "#ded1f5",
+            "color": "#ac9cd5",
             "font_style": null,
             "font_weight": null
           },
@@ -426,7 +426,7 @@
             "font_weight": null
           },
           "variable": {
-            "color": "#ded1f5",
+            "color": "#ac9cd5",
             "font_style": null,
             "font_weight": null
           },
@@ -441,7 +441,7 @@
             "font_weight": null
           },
           "variable.special": {
-            "color": "#ded1f5",
+            "color": "#ac9cd5",
             "font_style": "italic",
             "font_weight": null
           },

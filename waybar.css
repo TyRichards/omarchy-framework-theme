@@ -43,6 +43,15 @@ box#workspaces button.urgent {
     background-color: rgba(0,0,0,0.0);
 }
 
+box#workspaces button.empty {
+    opacity: 1.0;
+}
+
+box#workspaces button.active.empty,
+box#workspaces button.active.empty label {
+    color: #803b24;
+}
+
 box.modules-left {
     margin-left: 0;
     padding-left: 0;
@@ -67,4 +76,5 @@ box.modules-left {
 tooltip {
     border: 2px solid @foreground;
     border-radius: 1px;
+    margin: 0 0 0 0;
 }
