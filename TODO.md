@@ -14,7 +14,7 @@
   - [x] Ghostty — `ghostty.conf`
   - [x] Kitty — `kitty.conf`
   - [x] Foot — `foot.ini`
-  - [ ] Waybar — `waybar.css`
+  - [x] Waybar — `waybar.css`
   - [ ] Walker — `walker.css`
   - [ ] Mako — `mako.ini`
   - [ ] SwayOSD — `swayosd.css`
