@@ -11,7 +11,7 @@
 ## 🎨 Theme Consistency
 - [ ] **Orange Accents** — brand accent across the stack
   - [x] Alacritty — `alacritty.toml`
-  - [ ] Ghostty — `ghostty.conf`
+  - [x] Ghostty — `ghostty.conf`
   - [ ] Kitty — `kitty.conf`
   - [ ] Foot — `foot.ini`
   - [ ] Waybar — `waybar.css`
