@@ -46,7 +46,6 @@
 - [ ] **add a few backgrounds I like from miasma, vantablack, etc**
 
 ## ⚙️ Features & Polish
-- [ ] **Jazz up Walker Menus** (install, app, theme, theme bg)
 - [ ] **Hyprlock Finish — blur background or dim background?**
 - [ ] **Vencord styling (remove for now)**
     - [ ] colors
@@ -69,6 +68,7 @@
 ---
 
 ## ✅ Completed
+- [x] **Jazz up Walker Menus** (install, app, theme, theme bg)
 - [x] **Tmux box highlight color?** — terminal UI visibility
 - [x] less backgrounds
 - [x] Make ghostty, kitty and alacritty 7% transparent bg
