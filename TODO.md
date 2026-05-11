@@ -17,24 +17,24 @@
   - [x] Waybar — `waybar.css`
   - [x] Walker — `walker.css`
   - [x] Mako — `mako.ini`
-  - [ ] SwayOSD — `swayosd.css`
-  - [ ] Hyprland — `hyprland.conf`
+  - [x] SwayOSD — `swayosd.css`
+  - [x] Hyprland — `hyprland.conf`
   - [ ] Hyprlock — `hyprlock.conf`
-  - [ ] btop — `btop.theme`
+  - [x] btop — `btop.theme`
   - [ ] Helix — `helix.toml`
   - [ ] Gum — `gum.env.conf`
-  - [ ] Chromium / Chrome / Edge / Brave — `chromium.theme`
-  - [ ] Obsidian — `obsidian.css`
+  - [x] Chromium / Chrome / Edge / Brave — `chromium.theme`
+  - [x] Obsidian — `obsidian.css`
   - [ ] Keyboard RGB — `keyboard.rgb`
   - [ ] GNOME dark/light + icons — `light.mode`, `icons.theme`
   - [ ] Hyprland preview/share picker — `hyprland-preview-share-picker.css`
-  - [ ] Wallpapers/backgrounds — `backgrounds/*`
+  - [x] Wallpapers/backgrounds — `backgrounds/*`
   - [ ] OpenCode
   - [ ] VS Code — `vscode-extension/*`
   - [ ] VS Code Insiders
   - [ ] VSCodium
   - [ ] Cursor
-  - [ ] tmux — `tmux.conf`
+  - [x] tmux — `tmux.conf`
   - [ ] Zellij — `zellij.kdl`
   - [ ] Wofi — `wofi.css`
   - [ ] Neovim — `neovim.lua`
