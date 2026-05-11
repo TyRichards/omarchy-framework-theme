@@ -15,7 +15,7 @@
   - [x] Kitty — `kitty.conf`
   - [x] Foot — `foot.ini`
   - [x] Waybar — `waybar.css`
-  - [ ] Walker — `walker.css`
+  - [x] Walker — `walker.css`
   - [ ] Mako — `mako.ini`
   - [ ] SwayOSD — `swayosd.css`
   - [ ] Hyprland — `hyprland.conf`
