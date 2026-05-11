@@ -12,7 +12,7 @@
 - [ ] **Orange Accents** — brand accent across the stack
   - [x] Alacritty — `alacritty.toml`
   - [x] Ghostty — `ghostty.conf`
-  - [ ] Kitty — `kitty.conf`
+  - [x] Kitty — `kitty.conf`
   - [ ] Foot — `foot.ini`
   - [ ] Waybar — `waybar.css`
   - [ ] Walker — `walker.css`
