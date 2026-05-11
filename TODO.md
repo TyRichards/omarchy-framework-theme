@@ -6,11 +6,42 @@
 
 ## 🔥 Critical — Fix Before Ship
 
-- [ ] **Tmux negative space** — terminal UI polish
 
 
 ## 🎨 Theme Consistency
-- [ ] **Add splash of #b09fdf orange color to each app** — brand accent across the stack
+- [ ] **Orange Accents** — brand accent across the stack
+  - [x] Alacritty — `alacritty.toml`
+  - [ ] Ghostty — `ghostty.conf`
+  - [ ] Kitty — `kitty.conf`
+  - [ ] Foot — `foot.ini`
+  - [ ] Waybar — `waybar.css`
+  - [ ] Walker — `walker.css`
+  - [ ] Mako — `mako.ini`
+  - [ ] SwayOSD — `swayosd.css`
+  - [ ] Hyprland — `hyprland.conf`
+  - [ ] Hyprlock — `hyprlock.conf`
+  - [ ] btop — `btop.theme`
+  - [ ] Helix — `helix.toml`
+  - [ ] Gum — `gum.env.conf`
+  - [ ] Chromium / Chrome / Edge / Brave — `chromium.theme`
+  - [ ] Obsidian — `obsidian.css`
+  - [ ] Keyboard RGB — `keyboard.rgb`
+  - [ ] GNOME dark/light + icons — `light.mode`, `icons.theme`
+  - [ ] Hyprland preview/share picker — `hyprland-preview-share-picker.css`
+  - [ ] Wallpapers/backgrounds — `backgrounds/*`
+  - [ ] OpenCode
+  - [ ] VS Code — `vscode-extension/*`
+  - [ ] VS Code Insiders
+  - [ ] VSCodium
+  - [ ] Cursor
+  - [ ] tmux — `tmux.conf`
+  - [ ] Zellij — `zellij.kdl`
+  - [ ] Wofi — `wofi.css`
+  - [ ] Neovim — `neovim.lua`
+  - [ ] Warp — `warp.yaml`
+  - [ ] Vencord — `vencord.theme.css`
+  - [ ] Zed — `aether.zed.json`
+  - [ ] GTK — `gtk.css`, `aether.override.css`
 - [ ] **edit a couple of the backgrounds**
 - [ ] **add a few backgrounds I like from miasma, vantablack, etc**
 
@@ -29,6 +60,7 @@
 - [ ] **Add Screenshot** — save for the absolute end
 
 ## ⏳ Maybe Later
+- [ ] **Tmux negative space** — tmux has no native pane padding/gaps; revisit if a clean workaround appears
 - [ ] **Waybar — Tooltip black outer box fix** (GTK CSS limitation, `all: initial` didn't work)
 
 ## 🗑️ Dumb Ideas
