@@ -20,6 +20,8 @@
   - [x] SwayOSD — `swayosd.css`
   - [x] Hyprland — `hyprland.conf`
   - [ ] Hyprlock — `hyprlock.conf`
+  - [ ] Omarchy about
+  - [ ] Omarchy lock screen
   - [x] btop — `btop.theme`
   - [ ] Helix — `helix.toml`
   - [ ] Gum — `gum.env.conf`
@@ -37,11 +39,11 @@
   - [x] tmux — `tmux.conf`
   - [ ] Zellij — `zellij.kdl`
   - [ ] Wofi — `wofi.css`
-  - [ ] Neovim — `neovim.lua`
+  - [x] Neovim — `neovim.lua`
   - [ ] Warp — `warp.yaml`
   - [ ] Vencord — `vencord.theme.css`
   - [ ] Zed — `aether.zed.json`
-  - [ ] GTK — `gtk.css`, `aether.override.css`
+  - [x] GTK — `gtk.css`, `aether.override.css`
 - [ ] **edit a couple of the backgrounds**
 - [ ] **add a few backgrounds I like from miasma, vantablack, etc**
 
