@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+THEME_NAME="${1:-}"
+CURRENT_THEME_DIR="$HOME/.config/omarchy/current/theme"
+COLORS_FILE="$CURRENT_THEME_DIR/colors.toml"
+
+# Scoped to this theme only. Omarchy normalizes repo names like
+# omarchy-framework-theme -> framework.
+case "$THEME_NAME" in
+  framework|framework-theme|omarchy-framework) ;;
+  *) exit 0 ;;
+esac
+
+[[ -f "$COLORS_FILE" ]] || exit 0
+ACCENT=$(awk -F'"' '/^[[:space:]]*accent[[:space:]]*=/{print $2; exit}' "$COLORS_FILE")
+[[ "$ACCENT" =~ ^#[0-9A-Fa-f]{6}$ ]] || exit 0
+
+if pgrep -x tmux >/dev/null; then
+  tmux set -g pane-active-border-style "fg=$ACCENT"
+fi

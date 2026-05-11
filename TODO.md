@@ -6,7 +6,6 @@
 
 ## 🔥 Critical — Fix Before Ship
 
-- [ ] **Tmux box highlight color?** — terminal UI visibility
 - [ ] **Tmux negative space** — terminal UI polish
 
 
@@ -25,6 +24,7 @@
 
 ## 📦 Documentation & Final
 - [ ] **Add README.md file**
+- [ ] **README: document tmux theme setup** — tell users to add `source-file -q ~/.config/omarchy/current/theme/tmux.conf` to `~/.config/tmux/tmux.conf`
 - [ ] Does this need an AGENTS.md file? See @Oldjobobo themes on github.
 - [ ] **Add Screenshot** — save for the absolute end
 
@@ -37,6 +37,7 @@
 ---
 
 ## ✅ Completed
+- [x] **Tmux box highlight color?** — terminal UI visibility
 - [x] less backgrounds
 - [x] Make ghostty, kitty and alacritty 7% transparent bg
 - [x] Waybar — flip colors (selected light, unselected dimmer)
