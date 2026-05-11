@@ -16,7 +16,7 @@
   - [x] Foot — `foot.ini`
   - [x] Waybar — `waybar.css`
   - [x] Walker — `walker.css`
-  - [ ] Mako — `mako.ini`
+  - [x] Mako — `mako.ini`
   - [ ] SwayOSD — `swayosd.css`
   - [ ] Hyprland — `hyprland.conf`
   - [ ] Hyprlock — `hyprlock.conf`
