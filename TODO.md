@@ -13,7 +13,7 @@
   - [x] Alacritty — `alacritty.toml`
   - [x] Ghostty — `ghostty.conf`
   - [x] Kitty — `kitty.conf`
-  - [ ] Foot — `foot.ini`
+  - [x] Foot — `foot.ini`
   - [ ] Waybar — `waybar.css`
   - [ ] Walker — `walker.css`
   - [ ] Mako — `mako.ini`
