@@ -6,7 +6,7 @@
 
 ## 🔥 Critical — Fix Before Ship
 
-
+- [ ] **fix the black cursor issue in tmux**
 
 ## 🎨 Theme Consistency
 - [ ] **Orange Accents** — brand accent across the stack

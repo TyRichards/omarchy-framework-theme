@@ -83,6 +83,6 @@ window .list child:selected .item-box * {
     color: @color0;
 }
 
-child:last-child .item-box {
+window .list child:last-child .item-box {
     border-bottom: none;
 }
