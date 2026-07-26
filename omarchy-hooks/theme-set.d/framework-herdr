@@ -30,8 +30,6 @@ allowed_tokens = {
 }
 theme = tomllib.loads(theme_path.read_text())
 colors = {key: value for key, value in theme.items() if key in allowed_tokens and isinstance(value, str)}
-if not colors:
-    raise SystemExit(0)
 
 config = config_path.read_text()
 section = re.search(r"(?m)^\[theme\.custom\][ \t]*$", config)
@@ -42,7 +40,9 @@ if section:
     next_section = re.search(r"(?m)^\[", config[body_start:])
     body_end = body_start + (next_section.start() if next_section else len(config[body_start:]))
     body = config[body_start:body_end]
-    for key in colors:
+    # This theme file is authoritative: remove previously applied tokens that were
+    # deleted from herdr.conf instead of leaving stale colors in Herdr's config.
+    for key in allowed_tokens:
         body = re.sub(rf"(?m)^[ \t]*{re.escape(key)}[ \t]*=.*(?:\n|$)", "", body)
     config = config[:body_start] + "\n" + color_lines + body.lstrip("\n") + config[body_end:]
 else:
