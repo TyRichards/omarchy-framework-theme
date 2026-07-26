@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+THEME_NAME="${1:-}"
+CURRENT_THEME_DIR="$HOME/.config/omarchy/current/theme"
+HERDR_THEME_FILE="$CURRENT_THEME_DIR/herdr.conf"
+HERDR_CONFIG="${HERDR_CONFIG_PATH:-$HOME/.config/herdr/config.toml}"
+
+# Scoped to this theme only. Omarchy normalizes repo names like
+# omarchy-framework-theme -> framework.
+case "$THEME_NAME" in
+  framework|framework-theme|omarchy-framework) ;;
+  *) exit 0 ;;
+esac
+
+[[ -f "$HERDR_THEME_FILE" && -f "$HERDR_CONFIG" ]] || exit 0
+ACCENT=$(awk -F'"' '/^[[:space:]]*accent[[:space:]]*=/{print $2; exit}' "$HERDR_THEME_FILE")
+[[ "$ACCENT" =~ ^(#[0-9A-Fa-f]{6}|[A-Za-z]+|rgb\([0-9]+,[[:space:]]*[0-9]+,[[:space:]]*[0-9]+\))$ ]] || exit 0
+
+python3 - "$HERDR_CONFIG" "$ACCENT" <<'PY'
+import re
+import sys
+from pathlib import Path
+
+config_path = Path(sys.argv[1])
+accent = sys.argv[2]
+config = config_path.read_text()
+section = re.search(r"(?m)^\[theme\.custom\][ \t]*$", config)
+accent_line = f'accent = "{accent}"\n'
+
+if section:
+    body_start = section.end()
+    next_section = re.search(r"(?m)^\[", config[body_start:])
+    body_end = body_start + (next_section.start() if next_section else len(config[body_start:]))
+    body = config[body_start:body_end]
+    body = re.sub(r"(?m)^[ \t]*accent[ \t]*=.*(?:\n|$)", "", body)
+    config = config[:body_start] + "\n" + accent_line + body.lstrip("\n") + config[body_end:]
+else:
+    config = config.rstrip() + "\n\n[theme.custom]\n" + accent_line
+
+config_path.write_text(config)
+PY
+
+if command -v herdr >/dev/null 2>&1; then
+  herdr server reload-config >/dev/null 2>&1 || true
+fi
