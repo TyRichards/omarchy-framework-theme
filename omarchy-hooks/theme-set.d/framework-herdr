@@ -14,29 +14,39 @@ case "$THEME_NAME" in
 esac
 
 [[ -f "$HERDR_THEME_FILE" && -f "$HERDR_CONFIG" ]] || exit 0
-ACCENT=$(awk -F'"' '/^[[:space:]]*accent[[:space:]]*=/{print $2; exit}' "$HERDR_THEME_FILE")
-[[ "$ACCENT" =~ ^(#[0-9A-Fa-f]{6}|[A-Za-z]+|rgb\([0-9]+,[[:space:]]*[0-9]+,[[:space:]]*[0-9]+\))$ ]] || exit 0
 
-python3 - "$HERDR_CONFIG" "$ACCENT" <<'PY'
+python3 - "$HERDR_CONFIG" "$HERDR_THEME_FILE" <<'PY'
 import re
 import sys
+import tomllib
 from pathlib import Path
 
 config_path = Path(sys.argv[1])
-accent = sys.argv[2]
+theme_path = Path(sys.argv[2])
+allowed_tokens = {
+    "accent", "panel_bg", "surface0", "surface1", "surface_dim", "overlay0",
+    "overlay1", "text", "subtext0", "mauve", "green", "yellow", "red",
+    "blue", "teal", "peach",
+}
+theme = tomllib.loads(theme_path.read_text())
+colors = {key: value for key, value in theme.items() if key in allowed_tokens and isinstance(value, str)}
+if not colors:
+    raise SystemExit(0)
+
 config = config_path.read_text()
 section = re.search(r"(?m)^\[theme\.custom\][ \t]*$", config)
-accent_line = f'accent = "{accent}"\n'
+color_lines = "".join(f'{key} = "{value}"\n' for key, value in colors.items())
 
 if section:
     body_start = section.end()
     next_section = re.search(r"(?m)^\[", config[body_start:])
     body_end = body_start + (next_section.start() if next_section else len(config[body_start:]))
     body = config[body_start:body_end]
-    body = re.sub(r"(?m)^[ \t]*accent[ \t]*=.*(?:\n|$)", "", body)
-    config = config[:body_start] + "\n" + accent_line + body.lstrip("\n") + config[body_end:]
+    for key in colors:
+        body = re.sub(rf"(?m)^[ \t]*{re.escape(key)}[ \t]*=.*(?:\n|$)", "", body)
+    config = config[:body_start] + "\n" + color_lines + body.lstrip("\n") + config[body_end:]
 else:
-    config = config.rstrip() + "\n\n[theme.custom]\n" + accent_line
+    config = config.rstrip() + "\n\n[theme.custom]\n" + color_lines
 
 config_path.write_text(config)
 PY
