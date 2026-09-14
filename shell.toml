@@ -1,0 +1,172 @@
+# Framework theme for Omarchy Quattro's Quickshell-based shell.
+#
+# OMARCHY 3 STYLE PORT MAP
+# ------------------------
+# [bar], [controls], and [tooltip] preserve waybar.css.
+# [notifications] preserves mako.ini.
+# [launcher] and [menu] preserve walker.css and wofi.css.
+# [popups] preserves swayosd.css and Waybar flyout styling.
+# [lock] preserves hyprlock.conf.
+#
+# Quickshell does not expose every old GTK selector (for example, individual
+# workspace cell borders), so those details are represented through the closest
+# supported shared surface/control tokens instead of carrying dead CSS.
+
+# Ported from waybar.css: true-black bar, lavender text/chrome, and hot-orange
+# attention states (active widgets, recording, updates, and urgent states).
+[bar]
+background = "#000000"
+background-alpha = 1.0
+text = "#ac9cd6"
+active = "#ff7547"
+scale-with-font = true
+size-horizontal = 26
+size-vertical = 28
+
+# Keep shell borders aligned with the original lavender Hyprland borders rather
+# than inheriting the orange accent.
+[hyprland]
+active-border = "#ac9cd6"
+active-border-foreground = "#ac9cd6"
+
+# Ported from waybar.css plus Walker/Wofi input and selection styling. The dark
+# purple idle fill comes from Walker's search field; lavender outlines and solid
+# lavender selected controls preserve the old square, high-contrast treatment.
+[controls]
+normal-color = "#271f37"
+normal-fill-alpha = 1.0
+normal-border = "#ac9cd6"
+normal-border-width = 1
+normal-border-alpha = 1.0
+
+hover-cursor-color = "#ac9cd6"
+hover-cursor-fill-alpha = 0.08
+hover-cursor-border = "#ac9cd6"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 1.0
+
+focus-color = "#ac9cd6"
+focus-fill-alpha = 0.08
+focus-border = "#ac9cd6"
+focus-border-width = 2
+focus-border-alpha = 1.0
+
+selected-color = "#ac9cd6"
+selected-fill-alpha = 1.0
+selected-border = "#ac9cd6"
+selected-border-width = 1
+selected-border-alpha = 1.0
+
+pressed-fill-alpha = 0.22
+selection-fill-alpha = 0.35
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+
+# Mako used JetBrains Mono at 11px; Quattro owns the font family globally, so
+# preserve the compact scale while respecting the selected Omarchy font.
+[font]
+base-size = 11
+
+# Ported from swayosd.css and Waybar flyouts: black cards, bright lavender text,
+# a crisp 2px lavender frame, and the global orange accent for OSD progress.
+[popups]
+background = "#000000"
+background-alpha = 1.0
+text = "#dfcdfe"
+border = "#ac9cd6"
+border-alpha = 1.0
+border-width = 2
+
+# Ported from waybar.css tooltip styling.
+[tooltip]
+background = "#000000"
+background-alpha = 0.97
+text = "#ac9cd6"
+border = "#ac9cd6"
+border-alpha = 1.0
+border-width = 2
+
+# Ported from mako.ini: true black, bright readable lavender, a 2px lavender
+# border, and orange countdown/urgency progress.
+[notifications]
+background = "#000000"
+background-alpha = 1.0
+text = "#dfcdfe"
+border = "#ac9cd6"
+border-alpha = 1.0
+border-width = 2
+countdown = "#ff7547"
+
+# Ported from walker.css and wofi.css: a 70% black scrim, black launcher card,
+# lavender frame, and inverted lavender-on-black selection treatment.
+[launcher]
+background = "#000000"
+background-alpha = 0.95
+text = "#ac9cd6"
+border = "#ac9cd6"
+border-alpha = 1.0
+border-width = 2
+scrim = "#000000"
+scrim-alpha = 0.70
+selected-background = "#ac9cd6"
+selected-background-alpha = 1.0
+selected-text = "#000000"
+selected-border = "#ac9cd6"
+selected-border-alpha = 1.0
+selected-border-width = 2
+
+# Ported from Walker's install/app/theme menus and Wofi list rows. Clipboard and
+# emoji surfaces inherit this same strong lavender selection language.
+[menu]
+background = "#000000"
+background-alpha = 1.0
+text = "#ac9cd6"
+border = "#ac9cd6"
+border-alpha = 1.0
+border-width = 2
+scrim = "#000000"
+scrim-alpha = 0.70
+selected-background = "#ac9cd6"
+selected-background-alpha = 1.0
+selected-text = "#000000"
+selected-border = "#ac9cd6"
+selected-border-alpha = 1.0
+selected-border-width = 2
+
+[polkit]
+background = "#000000"
+background-alpha = 1.0
+text = "#dfcdfe"
+text-error = "#ff7547"
+border = "#ac9cd6"
+border-error = "#ff7547"
+border-alpha = 1.0
+scrim = "#000000"
+scrim-alpha = 0.70
+accent = "#ff7547"
+
+# Ported from hyprlock.conf: two-thirds opaque black input, soft lavender text,
+# dark-lavender idle border, bright-lavender active border, and orange feedback.
+[lock]
+background = "#000000"
+background-alpha = 0.66
+text = "#b09fdf"
+placeholder = "#b09fdf"
+text-error = "#ff7547"
+border = "#8374b9"
+border-active = "#ac9cd6"
+border-error = "#ff7547"
+border-alpha = 1.0
+selection = "#ff7547"
+selection-alpha = 0.45
+
+[image-picker]
+scrim = "#000000"
+scrim-alpha = 0.70
+text = "#ac9cd5"
+selected-border = "#ff7547"
+selected-border-alpha = 1.0
+unselected-border = "#ac9cd6"
+unselected-border-alpha = 0.28
