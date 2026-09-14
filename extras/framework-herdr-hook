@@ -163,6 +163,7 @@ content = config_path.read_text()
 # Refuse to rewrite malformed user configuration.
 config = parse_toml(config_path, "Herdr config")
 delete_state = False
+colors = {}
 
 if mode == "apply":
     theme = parse_toml(theme_path, "Framework Herdr theme")
@@ -175,9 +176,13 @@ if mode == "apply":
         for key, value in custom.items()
         if key in managed_tokens and isinstance(value, str)
     }
+    # An intentionally empty overlay means "use Herdr's normal styling" even
+    # while Framework remains selected. Treat it exactly like leaving the theme
+    # so commenting every token is a reversible, hot-reloadable opt-out.
     if not colors:
-        fail(f"no supported color tokens found in {theme_path}")
+        mode = "restore"
 
+if mode == "apply":
     color_lines = "".join(
         f'{key} = {json.dumps(value)}\n' for key, value in colors.items()
     )

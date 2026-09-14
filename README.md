@@ -41,7 +41,7 @@ omarchy hook install theme-set ~/.config/omarchy/themes/framework/extras/framewo
 omarchy theme set framework
 ```
 
-The hook applies the complete overlay only for Framework, reloads Herdr, and restores every displaced user value after switching to another theme.
+The hook applies the complete overlay only for Framework, reloads Herdr, and restores every displaced user value after switching to another theme. To opt out while keeping Framework active, comment every assignment in `herdr.toml` and reapply the theme.
 
 ### tmux
 
