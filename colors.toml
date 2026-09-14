@@ -25,7 +25,9 @@ yellow = "#c8b8e6"
 orange = "#ff7547"
 green = "#ac9cd6"
 cyan = "#ff7547"
-blue = "#8374b9"
+# Herdr and stock Omarchy tmux use ANSI blue for the active pane border, so
+# Framework maps that role to its orange accent while Hyprland stays lavender.
+blue = "#ff7547"
 magenta = "#9684cc"
 brown = "#645c73"
 

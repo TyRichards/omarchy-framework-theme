@@ -20,7 +20,7 @@ The Omarchy 3 Waybar, Mako, Walker/Wofi, SwayOSD, and Hyprlock files were retire
 - SwayOSD → popup/OSD surfaces
 - Hyprlock → lock screen
 
-The palette is expressed in Quattro's semantic [`colors.toml`](colors.toml) format. Omarchy generates terminal, editor, Gum, Pi, Helix, Obsidian, VS Code, and other standard theme files from that palette.
+The palette is expressed in Quattro's semantic [`colors.toml`](colors.toml) format. Omarchy generates terminal, editor, Gum, Pi, Helix, Obsidian, VS Code, and other standard theme files from that palette. Framework maps ANSI blue to its hot-orange accent so Herdr's native active-pane border is orange without installing a global Herdr override; Hyprland borders remain lavender through their dedicated palette keys.
 
 ### Hyprland
 
