@@ -32,16 +32,16 @@ For security, Omarchy does not execute Lua supplied by a Git-cloned third-party 
 
 The repository retains hand-tuned assets for apps outside Quattro's generated theme set, including Herdr, Zed/Aether, GTK, Vencord, Warp, Zellij, and tmux.
 
-### Herdr pane borders
+### Herdr
 
-Herdr's focused pane uses `palette.accent`; inactive panes use `palette.overlay0`. [`herdr.toml`](herdr.toml) maps those to Framework's matching ANSI colors—green (`#ac9cd6`) and dark gray (`#4e3f6e`). Because Quattro correctly refuses to execute scripts from an installed theme, enable the optional state-preserving hook once:
+[`herdr.toml`](herdr.toml) translates the complete final Omarchy 3 Herdr profile: orange active tabs and focused-pane borders, purple inactive surfaces and borders, orange workspace emphasis, brighter inactive workspace text, and dark-purple Agent text. Because Quattro correctly refuses to execute scripts from an installed theme, enable the optional state-preserving hook once:
 
 ```bash
 omarchy hook install theme-set ~/.config/omarchy/themes/framework/extras/framework-herdr-hook
 omarchy theme set framework
 ```
 
-The hook applies these two values only for Framework, reloads Herdr, and restores the user's displaced values after switching to another theme.
+The hook applies the complete overlay only for Framework, reloads Herdr, and restores every displaced user value after switching to another theme.
 
 ### tmux
 

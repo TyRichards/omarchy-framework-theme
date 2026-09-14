@@ -44,9 +44,12 @@ mode = sys.argv[1]
 config_path = Path(sys.argv[2]).expanduser().resolve()
 theme_path = Path(sys.argv[3])
 state_dir = Path(sys.argv[4])
-# This integration owns only the two pane-border roles. Every other custom
-# Herdr token remains untouched while Framework is active.
-managed_tokens = {"accent", "overlay0"}
+# Complete token set from the final Omarchy 3 Framework Herdr profile. Tokens
+# outside this set remain untouched while Framework is active.
+managed_tokens = {
+    "accent", "surface0", "surface_dim", "overlay0", "overlay1", "text",
+    "subtext0", "green",
+}
 start_marker = "# >>> Omarchy Framework Herdr theme (managed)"
 end_marker = "# <<< Omarchy Framework Herdr theme (managed)"
 section_re = re.compile(r"(?m)^[ \t]*\[theme\.custom\][ \t]*(?:#.*)?$")
@@ -213,6 +216,18 @@ if mode == "apply":
             # Recover safely if the managed block survived but its state file
             # did not: preserve any user assignments outside that block.
             save_state(original_lines, False)
+        else:
+            # A newer Framework overlay may manage more tokens than the version
+            # that created this state file. Capture newly displaced user values
+            # without losing the originals already held for older tokens.
+            merged_originals = dict(state.get("original_lines", {}))
+            merged_originals.update(original_lines)
+            if merged_originals != state.get("original_lines", {}):
+                save_state(
+                    merged_originals,
+                    bool(state.get("section_created")),
+                    bool(state.get("legacy_migration")),
+                )
 
         body = marker_re.sub("", body)
         body = assignment_re.sub("", body)

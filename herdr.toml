@@ -1,14 +1,15 @@
-# Optional Framework-specific Herdr overlay.
+# Framework-specific Herdr overlay, translated from the final Omarchy 3 profile.
 #
-# Herdr's pane renderer uses palette.accent for a focused pane and
-# palette.overlay0 for an inactive pane. These named ANSI roles resolve through
-# Framework's terminal palette to the same colors as its Hyprland borders:
-#   green    / ANSI 2 = #ac9cd6 (active)
-#   darkgray / ANSI 8 = #4e3f6e (inactive)
-#
-# Install extras/framework-herdr-hook as documented in README.md to apply this
-# overlay only while Framework is active and restore user values on theme exit.
+# Install extras/framework-herdr-hook as documented in README.md. The hook
+# applies every token below only while Framework is active, reloads Herdr, and
+# restores the user's displaced values after switching to another theme.
 
 [theme.custom]
-accent = "green"
-overlay0 = "darkgray"
+accent = "#ff7547"      # Active tab and focused pane border
+surface0 = "#272037"    # Inactive tab background
+surface_dim = "#272037" # Space and Agent selection background
+overlay0 = "#8374b9"    # Inactive pane border, numbered tabs, Agent directory
+overlay1 = "#8374b9"    # Named inactive tabs and secondary sidebar text
+text = "#ff7547"        # Active workspace title
+subtext0 = "#c8b8e6"    # Inactive workspace title
+green = "#4e3f6e"       # Agent item text
