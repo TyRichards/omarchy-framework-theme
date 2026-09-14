@@ -24,7 +24,7 @@ The palette is expressed in Quattro's semantic [`colors.toml`](colors.toml) form
 
 ### Hyprland
 
-[`hyprland.lua`](hyprland.lua) is the Lua conversion of the original Hyprland customization. It restores the intended **lavender active border** (`#ac9cd6`), full window opacity, tight rounding, Framework gaps, and the original blur profile.
+[`hyprland.lua`](hyprland.lua) is the Lua conversion of the original Hyprland customization. It restores the intended **lavender active border** (`#ac9cd6`), full window opacity, tight rounding, and the original blur profile while leaving window gaps at Omarchy's defaults.
 
 For security, Omarchy does not execute Lua supplied by a Git-cloned third-party theme. A normal `omarchy theme install` therefore regenerates safe Hyprland Lua from `colors.toml`; the `hyprland_active_border` and `hyprland_inactive_border` palette keys still preserve the lavender borders. The complete layout/blur override is available when this repository is used as a trusted local theme (for example, through a local theme symlink).
 
