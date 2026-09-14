@@ -5,10 +5,10 @@
 # restores the user's displaced values after switching to another theme.
 
 [theme.custom]
-accent = "#ff7547"      # Active tab and focused pane border
+accent = "green"        # ANSI 2 / #ac9cd6: Hyprland active border
 surface0 = "#272037"    # Inactive tab background
 surface_dim = "#272037" # Space and Agent selection background
-overlay0 = "#8374b9"    # Inactive pane border, numbered tabs, Agent directory
+overlay0 = "darkgray"   # ANSI 8 / #4e3f6e: Hyprland inactive border
 overlay1 = "#8374b9"    # Named inactive tabs and secondary sidebar text
 text = "#ff7547"        # Active workspace title
 subtext0 = "#c8b8e6"    # Inactive workspace title

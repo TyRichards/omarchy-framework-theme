@@ -34,7 +34,7 @@ The repository retains hand-tuned assets for apps outside Quattro's generated th
 
 ### Herdr
 
-[`herdr.toml`](herdr.toml) translates the complete final Omarchy 3 Herdr profile: orange active tabs and focused-pane borders, purple inactive surfaces and borders, orange workspace emphasis, brighter inactive workspace text, and dark-purple Agent text. Because Quattro correctly refuses to execute scripts from an installed theme, enable the optional state-preserving hook once:
+[`herdr.toml`](herdr.toml) translates the complete final Omarchy 3 Herdr profile while aligning pane chrome with Hyprland: active tabs and focused-pane borders use ANSI green (`#ac9cd6`), and inactive pane borders use ANSI dark gray (`#4e3f6e`). Purple inactive surfaces, orange workspace emphasis, brighter inactive workspace text, and dark-purple Agent text remain intact. Because Quattro correctly refuses to execute scripts from an installed theme, enable the optional state-preserving hook once:
 
 ```bash
 omarchy hook install theme-set ~/.config/omarchy/themes/framework/extras/framework-herdr-hook
